@@ -23,3 +23,7 @@
     opacity: 1;
   }
 }
+
+@mixin animation($nome, $dur: 1s, $del: 0s, $dir: both) {
+  animation: $dur $del $nome $dir;
+}

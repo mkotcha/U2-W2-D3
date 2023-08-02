@@ -56,7 +56,8 @@ section {
       display: flex;
       justify-content: space-around;
       width: 100%;
-      animation: fadeIn 1s both;
+      // animation: fadeIn 1s both;
+      @include aninmation(fadein);
     }
   }
 }
