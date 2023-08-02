@@ -1,0 +1,82 @@
+@import "partials/reset";
+@import "partials/color";
+@import "partials/mixin";
+@import "partials/font";
+@import "partials/gap";
+@import "partials/button";
+@import "partials/animation";
+
+%imgSize {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+}
+
+nav {
+  background-color: $bgPrim;
+  @extend %pInline;
+  ul {
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        padding: 20px 20px;
+      }
+      &:hover {
+        background-color: colDark($bgPrim);
+      }
+    }
+  }
+}
+
+section {
+  .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    // @extend %pInline;
+    @extend %pBlock;
+    background-color: colLight($bgPrim);
+    .text {
+      width: 60%;
+      padding-right: 40px;
+      animation: fromLeft 1s;
+      position: relative;
+    }
+    img {
+      @extend %imgSize;
+      width: 40%;
+      animation: fromRight 1s;
+      position: relative;
+      @include floating;
+    }
+    .button {
+      opacity: 0;
+      padding-top: 40px;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      animation: fadeIn 1s both;
+    }
+  }
+}
+
+main {
+  @extend %pInline;
+  @extend %pBlock;
+  display: flex;
+  flex-wrap: wrap;
+
+  .card {
+    // width: 50%;
+    @include grid(2);
+    padding: 20px;
+    overflow: hidden;
+
+    img {
+      @extend %imgSize;
+      width: 100%;
+      @include floating(5px);
+    }
+  }
+}

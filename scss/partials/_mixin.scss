@@ -1,0 +1,15 @@
+@use "sass:math";
+
+@mixin titleBig() {
+  font-size: $titleSize;
+  padding-bottom: 20px;
+}
+
+@mixin floating($px: 2px) {
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px $px 8px;
+}
+
+@mixin grid($col) {
+  width: math.div(100, $col) + 0%;
+}

@@ -1,0 +1,26 @@
+@use "sass:map";
+
+$sizes: (
+  sm: 5px,
+  normal: 10px,
+  md: 20px,
+  lg: 30px,
+  xl: 40px,
+  xxl: 50px,
+);
+
+%pInline {
+  padding-inline: map.get($sizes, "xxl");
+}
+
+%pBlock {
+  padding-block: map.get($sizes, "xxl");
+}
+@each $key, $value in $sizes {
+  .padding-block-#{$key} {
+    padding-block: $value;
+  }
+  .padding-inline-#{$key} {
+    padding-inline: $value;
+  }
+}

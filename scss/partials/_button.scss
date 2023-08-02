@@ -1,0 +1,28 @@
+@use "sass:map";
+
+button {
+  //   background-color: $bgSec;
+  border-radius: 10px;
+  color: inherit;
+  border: none;
+  font-family: inherit;
+  padding: 10px 30px;
+  font-size: 1.2em;
+  transition: background-color 0.5s;
+}
+
+button:hover {
+  background-color: $bgPrim;
+}
+
+$butCol: (
+  1: #0e6cff,
+  2: #ff8700,
+  3: #4caf50,
+);
+
+@for $i from 1 to 4 {
+  .button-#{$i} {
+    background-color: map.get($butCol, $i);
+  }
+}

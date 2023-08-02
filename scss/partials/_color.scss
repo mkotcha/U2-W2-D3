@@ -1,0 +1,14 @@
+@use "sass:color";
+
+$bgPrim: blueviolet;
+$bgSec: cornflowerblue;
+
+$textCol: azure;
+
+@function colDark($colore) {
+  @return color.scale($colore, $lightness: -30%);
+}
+
+@function colLight($colore) {
+  @return color.scale($colore, $lightness: 30%);
+}

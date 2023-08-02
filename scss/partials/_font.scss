@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap");
+
+$titleSize: 2em;
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  color: $textCol;
+  font-size: 1.4rem;
+}
+
+nav {
+  font-size: 1.2em;
+}
+
+h1 {
+  @include titleBig;
+}
